@@ -16,6 +16,10 @@
 		003E47E317E9986F00FC0294 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 003E47E117E9986F00FC0294 /* MainStoryboard.storyboard */; };
 		003E47E617E9986F00FC0294 /* BIDMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 003E47E517E9986F00FC0294 /* BIDMainViewController.m */; };
 		003E47E917E9986F00FC0294 /* BIDFlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 003E47E817E9986F00FC0294 /* BIDFlipsideViewController.m */; };
+		003E47FA17E99F3300FC0294 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 003E47F917E99F3300FC0294 /* Settings.bundle */; };
+		00725DEB17E9A8A400F276C8 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 00725DEA17E9A8A400F276C8 /* icon.png */; };
+		00725DED17E9AF4F00F276C8 /* turtle.png in Resources */ = {isa = PBXBuildFile; fileRef = 00725DEC17E9AF4E00F276C8 /* turtle.png */; };
+		00725DEF17E9AF5B00F276C8 /* rabbit.png in Resources */ = {isa = PBXBuildFile; fileRef = 00725DEE17E9AF5B00F276C8 /* rabbit.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		003E47E517E9986F00FC0294 /* BIDMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDMainViewController.m; sourceTree = "<group>"; };
 		003E47E717E9986F00FC0294 /* BIDFlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDFlipsideViewController.h; sourceTree = "<group>"; };
 		003E47E817E9986F00FC0294 /* BIDFlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDFlipsideViewController.m; sourceTree = "<group>"; };
+		003E47F917E99F3300FC0294 /* Settings.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = Settings.bundle; sourceTree = "<group>"; };
+		00725DEA17E9A8A400F276C8 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		00725DEC17E9AF4E00F276C8 /* turtle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle.png; sourceTree = "<group>"; };
+		00725DEE17E9AF5B00F276C8 /* rabbit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rabbit.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +96,7 @@
 				003E47E717E9986F00FC0294 /* BIDFlipsideViewController.h */,
 				003E47E817E9986F00FC0294 /* BIDFlipsideViewController.m */,
 				003E47D617E9986F00FC0294 /* Supporting Files */,
+				003E47F917E99F3300FC0294 /* Settings.bundle */,
 			);
 			path = AppSettings;
 			sourceTree = "<group>";
@@ -95,9 +104,12 @@
 		003E47D617E9986F00FC0294 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				00725DEA17E9A8A400F276C8 /* icon.png */,
 				003E47D717E9986F00FC0294 /* AppSettings-Info.plist */,
 				003E47D817E9986F00FC0294 /* InfoPlist.strings */,
 				003E47DB17E9986F00FC0294 /* main.m */,
+				00725DEE17E9AF5B00F276C8 /* rabbit.png */,
+				00725DEC17E9AF4E00F276C8 /* turtle.png */,
 				003E47DD17E9986F00FC0294 /* AppSettings-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -155,6 +167,10 @@
 			files = (
 				003E47DA17E9986F00FC0294 /* InfoPlist.strings in Resources */,
 				003E47E317E9986F00FC0294 /* MainStoryboard.storyboard in Resources */,
+				003E47FA17E99F3300FC0294 /* Settings.bundle in Resources */,
+				00725DEB17E9A8A400F276C8 /* icon.png in Resources */,
+				00725DED17E9AF4F00F276C8 /* turtle.png in Resources */,
+				00725DEF17E9AF5B00F276C8 /* rabbit.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +296,7 @@
 				003E47EE17E9986F00FC0294 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
