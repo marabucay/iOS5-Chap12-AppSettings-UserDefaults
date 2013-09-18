@@ -89,6 +89,10 @@
 			<integer>1</integer>
 			<key>MaximumValue</key>
 			<integer>10</integer>
+			<key>MinimumValueImage</key>
+			<string>turtle.png</string>
+			<key>MaximumValueImage</key>
+			<string>rabbit.png</string>
 		</dict>
 	</array>
 	<key>StringsTable</key>
