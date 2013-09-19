@@ -47,12 +47,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	// Do any additional setup after loading the view, typically from a nib
+    UIApplication *app = [UIApplication sharedApplication];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(applicationWillEnterForeground:)
+                                                 name:UIApplicationWillEnterForegroundNotification
+                                               object:app];
+}
+- (void)applicationWillEnterForeground:(NSNotification *)notification {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults synchronize];
+    [self refreshFields];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
     self.usernameLabel = nil;

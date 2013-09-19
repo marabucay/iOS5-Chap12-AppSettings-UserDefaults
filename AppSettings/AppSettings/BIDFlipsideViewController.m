@@ -28,11 +28,22 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self refreshFields];
+    UIApplication *app = [UIApplication sharedApplication];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(applicationWillEnterForeground:)
+                                                 name:UIApplicationWillEnterForegroundNotification
+                                               object:app];
+}
+- (void)applicationWillEnterForeground:(NSNotification *)notification {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults synchronize];
+    [self refreshFields];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
@@ -79,11 +90,13 @@
 - (IBAction)engineSwitchTapped {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setBool:engineSwitch.on forKey:kWarpDriveKey];
+    [defaults synchronize];
 }
 
 - (IBAction)warpSliderTouched {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setFloat:warpFactorSlider.value forKey:kWarpFactorKey];
+    [defaults synchronize];
 }
 
 @end
