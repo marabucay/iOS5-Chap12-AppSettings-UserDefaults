@@ -171,6 +171,18 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="favoriteCandyLabel" destination="YIf-lA-cBC" id="fpY-7j-BeY"/>
+                        <outlet property="favoriteExcuseLabel" destination="LDz-nb-TFz" id="sXI-rP-VBG"/>
+                        <outlet property="favoriteGameLabel" destination="bHK-1x-lYT" id="S8f-6c-lfS"/>
+                        <outlet property="favoriteSinLabel" destination="hht-qC-Qtr" id="hm4-pW-fR9"/>
+                        <outlet property="favoriteTeaLabel" destination="MGd-37-rQj" id="ee7-cL-Yk3"/>
+                        <outlet property="passwordLabel" destination="24E-0v-TPg" id="Zdu-cX-Tnv"/>
+                        <outlet property="protocolLabel" destination="pmT-lQ-VNQ" id="Pdk-W5-mkZ"/>
+                        <outlet property="usernameLabel" destination="xBc-Bi-0nv" id="G1s-tw-Vca"/>
+                        <outlet property="warpDriveLabel" destination="7P1-tc-CAE" id="1gp-pQ-Ued"/>
+                        <outlet property="warpFactorLabel" destination="JFM-Id-j1U" id="411-c4-Bpr"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="-51" y="182"/>
@@ -187,7 +199,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Title" id="13">
+                                    <navigationItem title="Warp Settings" id="13">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="14">
                                             <connections>
                                                 <action selector="done:" destination="6" id="16"/>
@@ -196,23 +208,61 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Warp Engines :" lineBreakMode="tailTruncation" minimumFontSize="10" id="5ia-CR-bTZ">
+                                <rect key="frame" x="20" y="89" width="118" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Warp Factor :" lineBreakMode="tailTruncation" minimumFontSize="10" id="kZa-ZM-3tJ">
+                                <rect key="frame" x="20" y="197" width="103" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="8ub-m1-HfH">
+                                <rect key="frame" x="169" y="89" width="79" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="engineSwitchTapped" destination="6" eventType="valueChanged" id="Kxj-Qq-2bD"/>
+                                </connections>
+                            </switch>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="10" minimumValueImage="turtle.png" maximumValueImage="rabbit.png" id="dki-2p-QM0">
+                                <rect key="frame" x="18" y="237" width="284" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="warpSliderTouched" destination="6" eventType="valueChanged" id="YvA-so-JTZ"/>
+                                </connections>
+                            </slider>
                         </subviews>
-                        <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="delegate" destination="2" id="15"/>
+                        <outlet property="engineSwitch" destination="8ub-m1-HfH" id="t1g-fA-fdV"/>
+                        <outlet property="warpFactorSlider" destination="dki-2p-QM0" id="KCj-oG-ifU"/>
                     </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="368" y="182"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="rabbit.png" width="21" height="21"/>
+        <image name="turtle.png" width="21" height="21"/>
+    </resources>
     <classes>
         <class className="BIDFlipsideViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BIDFlipsideViewController.h"/>
             <relationships>
                 <relationship kind="action" name="done:"/>
+                <relationship kind="action" name="engineSwitchTapped"/>
+                <relationship kind="action" name="warpSliderTouched"/>
                 <relationship kind="outlet" name="delegate"/>
+                <relationship kind="outlet" name="engineSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="warpFactorSlider" candidateClass="UISlider"/>
             </relationships>
         </class>
         <class className="BIDMainViewController" superclassName="UIViewController">
