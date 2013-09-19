@@ -94,6 +94,22 @@
 			<key>MaximumValueImage</key>
 			<string>rabbit.png</string>
 		</dict>
+		<dict>
+			<key>Title</key>
+			<string>General Info</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+			<key>Title</key>
+			<string>More Settings</string>
+			<key>Key</key>
+			<string></string>
+			<key>File</key>
+			<string>More</string>
+		</dict>
 	</array>
 	<key>StringsTable</key>
 	<string>Root</string>
